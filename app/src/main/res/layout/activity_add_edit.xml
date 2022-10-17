@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="car"
+            type="com.rich.designpatternexercise.model.CarResponseItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.AddEditActivity"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgCar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etCarname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:text="@{car.name}"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category"
+            android:text="@{car.category}"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:text="@{`Rp.` + Integer.toString(car.price)}"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Status"
+            android:text="@{Boolean.toString(car.status)}"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etImageLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Image link"
+            android:text="Image Link"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnSaveCar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save" />
+    </LinearLayout>
+</layout>
